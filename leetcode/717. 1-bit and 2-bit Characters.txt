@@ -1,0 +1,45 @@
+We have two special characters. The first character can be represented by one bit 0.
+The second character can be represented by two bits (10 or 11).
+
+Now given a string represented by several bits. Return whether the last character must be a one-bit character or not.
+The given string will always end with a zero.
+
+Example 1:
+Input:
+bits = [1, 0, 0]
+Output: True
+Explanation:
+The only way to decode it is two-bit character and one-bit character. So the last character is one-bit character.
+
+Solution
+1- determine  whether arrays length is odd or even
+2- if event check the 2-bit
+   - if the two last ones are equal to 10 or 11 return
+   -if even return false;
+3-if odd check only the last bit
+    -check just the last one bit
+
+
+[1,1,1,0]->false,[0,0]->true,[1,0]->false,[0,1,0]->false
+
+
+var isOneBitCharacter = function(bits) {
+    if(bits.length === 1 || (bits.length > 1 && bits[bits.length-2] === 0)) return true;
+
+    let isOneBit;
+    for(let i = 0; i < bits.length; i++) {
+
+        if(bits[i] === 0) {
+                isOneBit = true;
+
+        }
+        if(bits[i] === 1) {
+                isOneBit = false;
+                i++;
+                if(i >= bits.length -1) break;
+        }
+
+
+    }
+    return isOneBit;
+}
