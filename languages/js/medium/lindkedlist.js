@@ -25,6 +25,14 @@ LinkedList.prototype.insert = function(value){
   this.size++;
 }
 
+
+LinkedList.prototype.insertAtMiddle = function(value){
+  var prev = this.head ;
+  var current = new Node(value);
+  current.next = prev.next;
+  prev.next = current;
+  this.size ++;
+}
 //how to remove a node from a linked list by checking its value
 
 LinkedList.prototype.remove = function(value){
