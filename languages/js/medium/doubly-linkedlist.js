@@ -69,3 +69,14 @@ LinkedList.prototype.deleteAtTail = function(){
   this.size --;
   return toReturn;
 }
+
+LinkedList.prototype.findStartingHead = function(value){
+  var currentHead = this.head;
+  while(currentHead.next){
+    if(currrentHead.data == value){
+      return true;
+    }
+    currentHead =  currentHead.next;
+  }
+  return false;
+}
