@@ -36,3 +36,36 @@ LinkedList.prototype.addAtTail = function(value){
     this.tail = temp
   }
 }
+
+LinkedList.prototype.deleteAtHead = function(){
+  var toReturn = null;
+  if(this.head !== null){
+    toReturn = this.head.data;
+    if(this.tail == thsi.head){
+      this.head ==null;
+      this.tail = this.head;
+    }else{
+      this.head =this.head.next;
+      this.head.prev =null;
+    }
+  }
+  this.size --;
+  return toReturn;
+}
+
+LinkedList.prototype.deleteAtTail = function(){
+  var toReturn = null;
+  if (this.tail !== null) {
+    toReturn = this.tail.data;
+
+  if(this.tail === this.head){
+    this.head =null;
+    this.tail = null;
+  }else{
+    this.tail = this.tail.prev;
+    thsi.tail.next = null;
+  }
+  }
+  this.size --;
+  return toReturn;
+}
