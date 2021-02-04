@@ -91,3 +91,4 @@ LinkedList.prototype.findStartingTail = function(value){
   }
   return false;
 }
+///LinkedList done
