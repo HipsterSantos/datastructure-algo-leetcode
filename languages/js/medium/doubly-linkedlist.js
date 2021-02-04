@@ -80,3 +80,14 @@ LinkedList.prototype.findStartingHead = function(value){
   }
   return false;
 }
+
+LinkedList.prototype.findStartingTail = function(value){
+  var currentTail = this.tail;
+  while(currentTail.prev){
+    if(currentTail.data  == value){
+      return true;
+    }
+    currentTail = currentTail.prev;
+  }
+  return false;
+}
