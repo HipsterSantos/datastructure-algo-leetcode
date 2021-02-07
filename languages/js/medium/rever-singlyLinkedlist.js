@@ -1,12 +1,13 @@
-function reverse(sllist){
-  var node = sllist.head;
+function reverseSll(sll){
+  var node = sll.head;
   var prev = null;
   while(node){
-    var temp = node.next;
-    node.next = prev;
+    var temp = node.next ;
+    node.next =prev;
     prev = node;
-    if(!temp)
+    if(!temp){
       break;
+    }
     node = temp;
   }
   return node;
