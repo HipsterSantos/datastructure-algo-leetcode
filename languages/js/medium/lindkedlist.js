@@ -33,7 +33,29 @@ function addInStart(n){
   }
   this.size ++;
 }
-
+// Delete
+function DeleteNode(value){
+  var curr = this.head;
+  if(curr.data = value){
+    this.head = curr.next;
+    this.size --;
+  }else{
+    var prev = curr;
+    while(curr.next){
+      if(curr.data == value){
+        prev.next = curr.next;
+        prev = curr;
+        curr =curr.next;
+      }
+      prev = curr;
+      curr = curr.next;
+    }
+    if(curr.data == value){
+      prev.next = null;
+    }
+this.size --;
+  }
+}
 
 function getElementInIndex(n){
   var temp = this.head,
