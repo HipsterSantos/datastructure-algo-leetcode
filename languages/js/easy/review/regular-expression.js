@@ -1,3 +1,5 @@
+Warning: Content from Eloquent JavaScriptBook 
+
 //A comprehensive practie of regular expression
 Operator to count occurence
 + at least 1 or more  = 1
@@ -37,3 +39,25 @@ var r1 = /\d/ig;
 
 // Using all operators cited above
 var isNumber = (value)=> /\d[0123468579]/.test(value)
+//Regular expression  methods
+"Liskov, Barbara\nMcCarthy, John\nWalder, Philip".replace(/(\w+), (\w+)/g,"$2 $1")
+
+//String methods
+"Is the pope catholic".replace('catholic','human');
+"Norman brownU".replace(/[ou]/g,"a")
+let stock = "1 lemon, 2 cabbages, and 101 eggs";
+function minusOne(match, amount, unit) {
+amount = Number(amount) - 1;
+if (amount == 1) { // only one left, remove the 's'
+unit = unit.slice(0, unit.length - 1);
+} else if (amount == 0) {
+amount = "no";
+}
+return amount + " " + unit;
+}
+console.log(stock.replace(/(\d+) (\w+)/g, minusOne));
+
+//Regular expression backtracking
+
+var backtrack = /([01]+)+b/;
+var backtrack2 = /\b([01]+b | [\da-f]+h | \d+)\b/;
