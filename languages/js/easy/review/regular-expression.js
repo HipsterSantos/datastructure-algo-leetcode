@@ -38,10 +38,14 @@ var r1 = /\d/ig;
 // Using all operators cited above
 var isNumber = (value)=> /\d[0123468579]/.test(value)
 //Regular expression  methods
+"Liskov, Barbara\nMcCarthy, John\nWalder, Philip".replace(/(\w+), (\w+)/g,"$2 $1")
 
-
-//String methods 
-
+//String methods
+"Is the pope catholic".replace('catholic','human');
+"Norman brownU".replace(/[ou]/g,"a")
 
 
 //Regular expression backtracking
+
+var backtrack = /([01]+)+b/;
+var backtrack2 = /\b([01]+b | [\da-f]+h | \d+)\b/;
