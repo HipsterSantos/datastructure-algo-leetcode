@@ -37,3 +37,11 @@ var r1 = /\d/ig;
 
 // Using all operators cited above
 var isNumber = (value)=> /\d[0123468579]/.test(value)
+//Regular expression  methods
+
+
+//String methods 
+
+
+
+//Regular expression backtracking
