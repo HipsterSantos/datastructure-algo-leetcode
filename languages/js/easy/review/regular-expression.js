@@ -1,4 +1,4 @@
-Warning: Content from Eloquent JavaScriptBook 
+Warning: Content from Eloquent JavaScriptBook
 
 //A comprehensive practie of regular expression
 Operator to count occurence
@@ -17,7 +17,8 @@ $ - end
 /b/b - is In this boundary = /b ab /b
 | this or that = a|b
 ? maybe me = ?a
-
+// take it as a trick to \w*
+/[\W|\w]*/ == /[^]*/
 //The below function will help you guys in order to deal with testing in regula expressions
 for test functions use  below:
 .test(string);
@@ -61,3 +62,11 @@ console.log(stock.replace(/(\d+) (\w+)/g, minusOne));
 
 var backtrack = /([01]+)+b/;
 var backtrack2 = /\b([01]+b | [\da-f]+h | \d+)\b/;
+
+//Regular expression to strip a comment
+function stripComment(n){
+  return n.replace(/\/\/.*|/\/*[^]*\*/\/,"");
+}
+
+stripComment("2-2//334343");
+stripComment("/*321*/3232")
