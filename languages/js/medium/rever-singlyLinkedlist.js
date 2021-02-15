@@ -1,14 +1,14 @@
-function reverseSll(sll){
-  var node = sll.head;
-  var prev = null;
+//reverse a linkedlis
+function reverseSingleLinkedList(sll){
+  var node  = sll.head;
+  var pre = null;
   while(node){
-    var temp = node.next ;
-    node.next =prev;
+    var temp = node.next;
+    node.next = prev;
     prev = node;
-    if(!temp){
+    if(!temp)
       break;
-    }
-    node = temp;
+      node = temp;
   }
   return node;
 }
