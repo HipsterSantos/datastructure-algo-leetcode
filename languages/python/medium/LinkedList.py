@@ -20,3 +20,14 @@ class LinkedList(Node):
         self.size = self.size+1
 
     def remove(self,value):
+        curr =  self.head
+        if curr.data  = value:
+            self.head = self.head.next
+            self.size = self.size-1
+        else:
+            prev  = curr
+            while curr != None:
+                prev.next = curr.next
+                prev = curr 
+            prev = curr
+            curr  = curr.next
