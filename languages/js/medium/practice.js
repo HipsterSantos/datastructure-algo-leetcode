@@ -53,3 +53,19 @@ DoublyLinkdeList.prototype.addAtMidddle = function(value){
    }
 
 }
+
+DoublyLinkedList.prototype.deleteAHead = function(){
+  var toReturn  = null;
+  if(this.head != null){
+    toRetur = this.head.data ;
+    if(this.tail == this.head){
+      this.head = null;
+      this.tail = null;
+    }else{
+      this.head = this.head.next;
+      this.head.prev = null;
+    }
+  }
+  this.size--;
+  return toReturn;
+}
