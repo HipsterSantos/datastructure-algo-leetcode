@@ -11,3 +11,16 @@ function DoublyLinkedList(){
   this.tail = null;
   this.size = 0;
 }
+
+DoublyLinkdList.prototype.addAtHed = function(value){
+  if(this.head == null){
+    this.head = new DoublyLinkedListNode(value);
+    this.tail  = this.head;
+  }else{
+    var temp  = new DoublyLinkedListNode(value)
+    temp.next = this.head;
+    this.head  = temp;
+    this.prev = temp;
+  }
+  this.size ++;
+}
