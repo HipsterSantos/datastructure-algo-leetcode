@@ -40,3 +40,16 @@ DoublyLinked.prototype.remove = function(value){
   this.size++;
 
 }
+
+DoublyLinkdeList.prototype.addAtMidddle = function(value){
+   curr = this.head  || this.tail;
+   prev = curr;
+   while(curr.next){
+     prev.prev = next = curr;
+     curr.prev = prev
+     curr.next = prev.next
+     this.size++;
+     break;
+   }
+
+}
