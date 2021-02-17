@@ -85,3 +85,14 @@ DoublyLinkedList.prototype.deleteAtTail = function(){
   this.size--;
   return toReturn;
 }
+
+DoublyLinkedList.prototype.findStartingHead = function(value){
+  var curr = this.head;
+  while(curr.next){
+    if(curr.dat == value){
+      return true;
+    }
+    curr = curr.next;
+  }
+  return false;
+}
