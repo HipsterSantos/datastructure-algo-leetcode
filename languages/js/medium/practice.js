@@ -89,10 +89,21 @@ DoublyLinkedList.prototype.deleteAtTail = function(){
 DoublyLinkedList.prototype.findStartingHead = function(value){
   var curr = this.head;
   while(curr.next){
-    if(curr.dat == value){
+    if(curr.data == value){
       return true;
     }
     curr = curr.next;
+  }
+  return false;
+}
+
+DoublyLinkedlist.prototype.findAtTail = function(value){
+  var curr = this.head ;
+  while(curr.prev){
+    if(curr.data == value){
+      return true;
+    }
+    curr = curr.prev;
   }
   return false;
 }
