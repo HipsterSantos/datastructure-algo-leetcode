@@ -20,7 +20,23 @@ DoublyLinkdList.prototype.addAtHed = function(value){
     var temp  = new DoublyLinkedListNode(value)
     temp.next = this.head;
     this.head  = temp;
-    this.prev = temp;
+    this.prev =
+     temp;
   }
   this.size ++;
+}
+
+
+DoublyLinked.prototype.remove = function(value){
+  if(this.tail == null){
+    this.tail = new DoublyLinkedListNode(value);
+    this.head = this.tail;
+  }
+  else{
+    var temp = new DoublyLinkedListNode(value);
+    temp.prev = this.tail ;
+    this.tail  = temp;
+  }
+  this.size++;
+
 }
