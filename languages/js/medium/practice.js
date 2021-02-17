@@ -69,3 +69,19 @@ DoublyLinkedList.prototype.deleteAHead = function(){
   this.size--;
   return toReturn;
 }
+
+DoublyLinkedList.prototype.deleteAtTail = function(){
+  var toReturn = null;
+  if(this.tail != toReturn){
+    toReturn = this.tail.data;
+    if(this.tail == this.head){
+      this.head =null;
+      this.tail = null;
+    }else{
+      this.tail = this.tail.prev;
+      this.tail.next = null;
+    }
+  }
+  this.size--;
+  return toReturn;
+}
