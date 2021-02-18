@@ -107,3 +107,8 @@ DoublyLinkedlist.prototype.findAtTail = function(value){
   }
   return false;
 }
+
+
+
+
+//Challlenge ,reversing a linkedLisdt
