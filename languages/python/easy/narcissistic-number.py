@@ -16,3 +16,12 @@ class Solution2:
         for a in arr:
             sum  += int(a)**len(arr)
         return int(sum) is x
+
+class Solution:
+    def solve(self, x):
+        arr = list(str(x))
+        sum =len(arr)-len(arr)
+        for a in arr:
+            sum  += int(a)**len(arr)
+        return int(sum) == x
+        #it took 1 milicesond
