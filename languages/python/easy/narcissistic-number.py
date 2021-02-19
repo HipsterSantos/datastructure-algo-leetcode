@@ -4,8 +4,15 @@
 class Solution:
     def solve(self,x):
         arr = list(x)
-        sum =len(x)-len(x)
-        for a in arr
-            sum  += a ** len(x)
+        sum =0
+        for a in arr:
+            sum  += a ** len(arr)
         return sum
-        
+
+class Solution2:
+    def solve(self, x):
+        arr = list(str(x))
+        sum =len(arr)-len(arr)
+        for a in arr:
+            sum  += int(a)**len(arr)
+        return int(sum) is x
