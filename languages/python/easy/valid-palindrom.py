@@ -15,3 +15,10 @@ class Solution:
         if s == word:
             return  True
         return False
+
+
+class Solution2:
+    def isNumPalimdrom(self,value):
+        if int(str(value)[-1::-1]) == value:
+            return True
+        return False
