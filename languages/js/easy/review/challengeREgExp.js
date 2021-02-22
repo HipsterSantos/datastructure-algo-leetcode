@@ -90,23 +90,16 @@ AID - 10.1097/GRF.0b013e3182516d7b [doi]
 PST - ppublish
 SO  - Clin Obstet Gynecol. 2012 Jun;55(2):376-86. doi: 10.1097/GRF.0b013e3182516d7b.
 `;
+ris.match(/(\w+\s*?)-\s+(.*)/g)
+ris.match(/((\w*\s*?)-(\s*[^]*))\n*/g)[0].split(/\n+/g)
 ris.split(/\r?\n/).forEach( line  =>{
     console.log(line.match(/^(\w+\s+?)-\s+?(.*|[^])/));
         })
+
 ris.split(/\r?\n/).forEach( line  =>{
     console.log(line.match(/^(\w+\s*?)-\s+?(.*|[^])/));
         })
-
-        var none   = `
-        AB  - Ectopic pregnancy is directly related to tubal infection, and so prevention of
-              chlamydia and gonorrhea must be the watchword to lower its risk and incidence. With
-              accurate determination of very low human chorionic gonadotropin concentrations and
-              sonography, >85% of women are diagnosed before tubal rupture, which has led to
-              medical therapy and laparoscopic surgery with tubal preservation and the potential
-              for future fertility. Today, early intervention saves lives and reduces morbidity,
-              but ectopic pregnancy still accounts for 4% to 10% of pregnancy-related deaths and
-              leads to a high incidence of ectopic site gestations in subsequent pregnancies.`
-        function addJson(){
+function addJson(){
     var main  = none.match(/(\w+)\s*?-\s+?(.*)/),prop=main[1],value = main.input.replace(/(\w+\s+)-/,'');
     json = {prop,value}
     console.log(prop,value,main);
