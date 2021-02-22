@@ -24,4 +24,15 @@ var mergeAlternately = function(word1, word2) {
     }
     return old;
 
-};rged string.
+};
+
+class Solution:
+    def mergeAlternately(self, word1: str, word2: str) -> str:
+        arr1 = list(word1)
+        arr2 = list(word2)
+        newer = ""
+        for a in range(0,len(arr1)): 
+            newer+=arr1[a]
+            for l in range(0,a):
+                newer+=arr2[l]
+        return newer
