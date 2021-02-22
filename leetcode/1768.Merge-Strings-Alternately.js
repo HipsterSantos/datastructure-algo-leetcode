@@ -31,8 +31,20 @@ class Solution:
         arr1 = list(word1)
         arr2 = list(word2)
         newer = ""
-        for a in range(0,len(arr1)): 
+        for a in range(0,len(arr1))
             newer+=arr1[a]
             for l in range(0,a):
                 newer+=arr2[l]
         return newer
+
+
+"""
+Testes cases
+"abc"
+"pqr"
+"ab"
+"pqrs"
+"abcd"
+"pq"
+
+"""
