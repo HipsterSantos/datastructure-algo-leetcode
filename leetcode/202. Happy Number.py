@@ -22,3 +22,15 @@ class Solution:
         print(digit)
         print(sum)
         return True
+
+class Solution:
+    def isHappy(self, n: int) -> bool:
+        sum = 0
+        ss=set()
+        while n is not 1:
+            digit = n % 10;
+            sum+= digit ** 2
+            n //= 10
+            if n  not in ss:
+                ss.add(n)
+        return True

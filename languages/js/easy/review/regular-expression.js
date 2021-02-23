@@ -19,6 +19,72 @@ $ - end
 ? maybe me = ?a
 // take it as a trick to \w*
 /[\W|\w]*/ == /[^]*/
+
+
+#regular expression word boundary (\b)
+console.log("hello,vaja".match(/\bJava\b/))
+console.log("Helllo , vs".match(/\bJava\b/))
+
+Code: "Breakfast at 09:00 in the room 123:456".match(/\b(\d{1,2}[0-9]:\d{1,2})\b/)
+Output: (2) ["09:00", "09:00", index: 13, input: "Breakfast at 09:00 in the room 123:456", groups: undefined]
+
+Code: "Breakfast at 09:00 in the room 123:456".match(/\b(\d{1,2}[0-9]:\d{1,2}[0-9])\b/)
+Output: (2) ["09:00", "09:00", index: 13, input: "Breakfast at 09:00 in the room 123:456", groups: undefined]
+
+Code: "Breakfast at 19:00 in the room 123:456".match(/\b(\d{1,2}[0-9]:\d{1,2}[0-9])\b/)
+Output: (2) ["19:00", "19:00", index: 13, input: "Breakfast at 19:00 in the room 123:456", groups: undefined]
+
+Code: "Breakfast at 29:00 in the room 123:456".match(/\b(\d{1,2}[0-9]:\d{1,2}[0-9])\b/)
+Output: (2) ["29:00", "29:00", index: 13, input: "Breakfast at 29:00 in the room 123:456", groups: undefined]
+
+Code: "Gogog google ".match(/(go)+/ig)
+Output: (2) ["Gogo", "go"]
+            0: "Gogo"
+            1: "go"
+            length: 2
+            __proto__: Array(0)
+
+Code: "Gogog google ".match(/(go)/ig)
+Output: (3) ["Go", "go", "go"]
+
+Code: "site.com my.site.com devhipster.code".match(/(\w\.)+\w+/)
+Output: (2) ["e.com", "e.", index: 3, input: "site.com my.site.com devhipster.code", groups: undefined]
+              0: "e.com"
+              1: "e."
+              index: 3
+              input: "site.com my.site.com devhipster.code"
+              groups: undefined
+              length: 2
+              __proto__: Array(0)
+
+Code: "site.com my.site.com devhipster.code".match(/(\w+\.)+\w+/)
+Output: (2) ["site.com", "site.", index: 0, input: "site.com my.site.com devhipster.code", groups: undefined]
+Code: "site.com my.site.com devhipster.code".match(/(\w+\.)+\w+/g)
+Output: (3) ["site.com", "my.site.com", "devhipster.code"]
+            0: "site.com"
+            1: "my.site.com"
+            2: "devhipster.code"
+
+
+// Challenge create HTML Parser for emulate Angular|react component
+//like:
+<app-module></app-module>
+<router-outlet name="navbar"></router-outlet>
+<dashboard color="red" id="dash-b">
+  <ng-content></ng-content>
+  <router-outlet></router-outlet>
+<dashboard>
+//This parser must do what framework does
+
+
+//Naming groups in regular expression
+//one way to find group instead recall'em by your mind is a bit painfull ,let's take a tour on the code snippet below:
+
+let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;
+let str = "2019-04-30";
+
+
+
 //The below function will help you guys in order to deal with testing in regula expressions
 for test functions use  below:
 .test(string);
