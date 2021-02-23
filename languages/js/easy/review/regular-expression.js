@@ -19,6 +19,17 @@ $ - end
 ? maybe me = ?a
 // take it as a trick to \w*
 /[\W|\w]*/ == /[^]*/
+
+
+#regular expression word boundary (\b)
+console.log("hello,vaja".match(/\bJava\b/))
+console.log("Helllo , vs".match(/\bJava\b/))
+
+
+
+
+
+
 //The below function will help you guys in order to deal with testing in regula expressions
 for test functions use  below:
 .test(string);
