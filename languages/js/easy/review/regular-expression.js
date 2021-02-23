@@ -66,6 +66,22 @@ Output: (3) ["site.com", "my.site.com", "devhipster.code"]
             2: "devhipster.code"
 
 
+// Challenge create HTML Parser for emulate Angular|react component
+//like:
+<app-module></app-module>
+<router-outlet name="navbar"></router-outlet>
+<dashboard color="red" id="dash-b">
+  <ng-content></ng-content>
+  <router-outlet></router-outlet>
+<dashboard>
+//This parser must do what framework does
+
+
+//Naming groups in regular expression
+//one way to find group instead recall'em by your mind is a bit painfull ,let's take a tour on the code snippet below:
+
+let dateRegexp = /(?<year>[0-9]{4})-(?<month>[0-9]{2})-(?<day>[0-9]{2})/;
+let str = "2019-04-30";
 
 
 
