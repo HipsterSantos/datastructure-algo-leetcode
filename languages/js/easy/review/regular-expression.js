@@ -378,3 +378,12 @@ example:
     let regExp = /".+?"/g;
     let str =' a "witch" and her "broom" is one';
     console.log(str.match(regExp))
+Summary
+Quantifiers have two modes of work:
+
+Greedy- By default the regular expression engine tries to repeat the quantified character as many times as possible.
+For instance , \d+ consumes all possible digistes. When it becomes impossible to consume more(no more digits or string end), then it continues to match
+the rest of the pattern. If there's no match then it decreases then umber of repetitions(backtracks) and tries again.
+
+Lazy - Enabled by the question mark ? after the quantifier. The regexp engine tries to macth the rest of thepatter before each repetition of the equnatified cahracter.
+// "[^"]+".
