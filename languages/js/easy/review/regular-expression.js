@@ -361,3 +361,16 @@ function stripComment(n){
 
 stripComment("2-2//334343");
 stripComment("/*321*/3232")
+
+
+#Regular expression takeaways from Greedy and Lazy mode :
+
+Lazy mode = it means: repeat minimal number of times
+The meaning of ? ;
+? is a quantifier by itself (zero or one)
+if added after another quantifier(or even itself)i it gets another meaning- which is  : I switches the matching mode from greedy to lazy
+
+
+The regexp engine increases the number of repetitions only if the rest of the pattern can't match o the ginve position.
+
+Laziness is only enabled for the quantifier with?.
