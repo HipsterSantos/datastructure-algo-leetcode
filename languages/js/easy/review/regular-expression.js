@@ -361,3 +361,31 @@ function stripComment(n){
 
 stripComment("2-2//334343");
 stripComment("/*321*/3232")
+
+
+#Regular expression takeaways from Greedy and Lazy mode :
+
+Greedy-
+
+Lazy mode = it means: repeat minimal number of times
+The meaning of ? ;
+? is a quantifier by itself (zero or one)
+if added after another quantifier(or even itself)i it gets another meaning- which is  : I switches the matching mode from greedy to lazy
+
+
+The regexp engine increases the number of repetitions only if the rest of the pattern can't match o the ginve position.
+
+Laziness is only enabled for the quantifier with?.
+example:
+    let regExp = /".+?"/g;
+    let str =' a "witch" and her "broom" is one';
+    console.log(str.match(regExp))
+Summary
+Quantifiers have two modes of work:
+
+Greedy- By default the regular expression engine tries to repeat the quantified character as many times as possible.
+For instance , \d+ consumes all possible digistes. When it becomes impossible to consume more(no more digits or string end), then it continues to match
+the rest of the pattern. If there's no match then it decreases then umber of repetitions(backtracks) and tries again.
+
+Lazy - Enabled by the question mark ? after the quantifier. The regexp engine tries to macth the rest of thepatter before each repetition of the equnatified cahracter.
+// "[^"]+".
