@@ -365,6 +365,8 @@ stripComment("/*321*/3232")
 
 #Regular expression takeaways from Greedy and Lazy mode :
 
+Greedy-
+
 Lazy mode = it means: repeat minimal number of times
 The meaning of ? ;
 ? is a quantifier by itself (zero or one)
