@@ -374,3 +374,7 @@ if added after another quantifier(or even itself)i it gets another meaning- whic
 The regexp engine increases the number of repetitions only if the rest of the pattern can't match o the ginve position.
 
 Laziness is only enabled for the quantifier with?.
+example:
+    let regExp = /".+?"/g;
+    let str =' a "witch" and her "broom" is one';
+    console.log(str.match(regExp))
