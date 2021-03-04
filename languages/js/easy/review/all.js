@@ -17,15 +17,7 @@ async function getContributions(token, username) {
                 contributionCalendar {
                   colors
                   totalContributions
-                  weeks {
-                    contributionDays {
-                      color
-                      contributionCount
-                      date
-                      weekday
-                    }
-                    firstDay
-                  }
+
                 }
               }
             }
