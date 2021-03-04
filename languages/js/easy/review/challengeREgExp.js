@@ -126,3 +126,17 @@ var obj = {
    })
    .done();
 },
+
+
+  const token = "ae5cbc5ca22aab0d71eec2b8df956fcd3b73666c";
+
+
+
+fetch('URL_GOES_HERE', {
+   method: 'post',
+   headers: new Headers({
+     'Authorization': 'Basic '+btoa('username:password'),
+     'Content-Type': 'application/x-www-form-urlencoded'
+   }),
+   body: 'A=1&B=2'
+ });
