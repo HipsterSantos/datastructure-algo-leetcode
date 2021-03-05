@@ -104,3 +104,39 @@ function addJson(){
     json = {prop,value}
     console.log(prop,value,main);
 }
+
+fetch data from github api
+
+var obj = {
+   link: 'https://api.producthunt.com/v1/posts',
+   object: {
+     method: 'GET',
+     headers: {
+       'Accept': 'application/json',
+       'Content-Type': 'application/json',
+       'Authorization': 'Bearer ' + this.state.clientToken,
+       'Host': 'api.producthunt.com'
+     }
+   }
+ }
+ fetch(api.posts.link, obj)
+   .then((response) => response.json())
+   .then((responseData) => {
+     console.log(responseData);
+   })
+   .done();
+},
+
+
+  const token = "ae5cbc5ca22aab0d71eec2b8df956fcd3b73666c";
+
+
+
+fetch('URL_GOES_HERE', {
+   method: 'post',
+   headers: new Headers({
+     'Authorization': 'Basic '+btoa('username:password'),
+     'Content-Type': 'application/x-www-form-urlencoded'
+   }),
+   body: 'A=1&B=2'
+ });

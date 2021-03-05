@@ -389,3 +389,5 @@ the rest of the pattern. If there's no match then it decreases then umber of rep
 
 Lazy - Enabled by the question mark ? after the quantifier. The regexp engine tries to macth the rest of thepatter before each repetition of the equnatified cahracter.
 // "[^"]+".
+
+#Capturin Groups
