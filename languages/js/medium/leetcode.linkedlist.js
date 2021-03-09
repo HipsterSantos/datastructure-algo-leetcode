@@ -25,3 +25,15 @@ MyLinkedList.prototype.get = function(index) {
     }
     return curr;
 };
+
+/**
+ * Add a node of value val before the first element of the linked list. After the insertion, the new node will be the first node of the linked list.
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtHead = function(val) {
+    var temp = new Node(val);
+    temp.next  = this.head;
+    this.head = temp;
+    this.size++;
+};
