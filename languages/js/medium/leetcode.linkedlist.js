@@ -53,3 +53,24 @@ MyLinkedList.prototype.addAtTail = function(val) {
         this.size++;
     }
 };
+
+/**
+ * Add a node of value val before the index-th node in the linked list. If index equals to the length of linked list, the node will be appended to the end of linked list. If index is greater than the length, the node will not be inserted.
+ * @param {number} index
+ * @param {number} val
+ * @return {void}
+ */
+MyLinkedList.prototype.addAtIndex = function(index, val) {
+    var count = 0;
+    var curr = this.head;
+    while(index != count){
+        curr = curr.next;
+        count ++;
+    }
+
+    var temp  = new Node(val);
+    temp.next  = curr;
+    curr = temp;
+    this.size++;
+    // return curr;
+};
