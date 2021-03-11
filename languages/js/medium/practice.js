@@ -139,6 +139,20 @@ DoublyLinkedList.prototype.addAtFront = function(value){
   this.size++;
 }
 
+DoublyLinkedList.prototype.insertAtTail = function(value){
+  if(this.tail===null){
+    this.tail = new DoublyLinkedList(value);
+    this.head = this.tail;
+  }
+  else{
+    var tmp = new DoublyLinkedlistNode(value);
+    tmp.next = this.tail;
+    this.tail.next = tmp;
+    this.tail = tmp;
+  }
+  this.size++;
+}
+
 
 
 //Challlenge ,reversing a linkedLisdt
