@@ -109,6 +109,36 @@ DoublyLinkedlist.prototype.findAtTail = function(value){
 }
 
 
+//practice DoulbyLinkedList
+function DoublyLinkedListNode(data){
+  this.data  = data;
+  this.next = null;
+  this.prev = null;
+}
+
+function DoublyLinkedList(){
+  this.head = null;
+  this.tail = null;
+  this.size = 0;
+}
+DoublyLinkedList.prototype.isEmpty = function(){
+  return this.size === 0;
+}
+//inserting at head of doubly linked list
+DoublyLinkedList.prototype.addAtFront = function(value){
+  if(this.head == null){
+    this.head = new DoublyLinkedListNode(value);
+    this.tail = this.head;
+  }
+  else{
+  var tmp = new DoublyLinkedListNode(value);
+  tmp.next =  this.head;
+  this.head.prev = tmp;
+  this.head = tmp;
+  }
+  this.size++;
+}
+
 
 
 //Challlenge ,reversing a linkedLisdt
