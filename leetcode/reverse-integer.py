@@ -19,6 +19,21 @@ Test cases
 0
 
 """
+My first attempt:
+class Solution:
+    def reverse(self, x: int) -> int:
+        ln="-"
+        if x < 2**31:
+            if str(x)[0] == '-':
+                sr = (str(x)[::-1])
+                sr =sr.replace('-','')
+                ln= ln+sr
+                print(ln)
+            else:
+                return int(str(x)[::-1])
+        else:
+            return 0
+
 
 Python Solution:
     def rever(x):
