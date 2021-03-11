@@ -188,7 +188,17 @@ DoublyLinkedList.prototype.deleteAtTail = function(){
   return toReturn;
 }
 
+DoublyLinkedList.prototype.findStartringHead  =function(value){
+  var curretnHead = this.head;
+  while(currentHead.next){
+    if(currentHead.data == value){
+      return true;
+    }
+    curretnHea = currentHead.next;
+  }
+  return false;
 
+}
 
 
 
