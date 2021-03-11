@@ -19,3 +19,8 @@ Test cases
 0
 
 """
+
+Python Solution:
+    def rever(x):
+    res = -int(f'{x}'[:0:-1]) if x < 0 else int(f'{x}'[::-1])
+    return res if -2**31 <= res <= 2**31-1 else 0
