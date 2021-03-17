@@ -27,6 +27,44 @@ function parseINI(string){
 
 //challenging create a Ris parser
 
+AB  - BACKGROUND: A diagnosis of ectopic pregnancy (EP) is primarily achieved using
+      transvaginal ultrasonography (TVS). Pregnancy of unknown location (PUL) is the term
+      used to categorize a pregnancy in a woman with a positive pregnancy test when no
+      pregnancy has been visualized using TVS. This review appraises current tools for the
+      diagnosis of EP, describes the diagnostic criteria for non-tubal EP and reviews the
+      literature on the clinical management of PUL. METHODS: We performed a targeted
+      search using the PubMed database. All articles published in the English language
+      from January 1984 to March 2013 were screened for eligibility. RESULTS: Using TVS to
+      diagnose EP is highly sensitive (87-99%) and specific (94-99.9%). Variations exist
+      in the criteria used for ultrasound diagnosis. Studies report that between 5 and 42%
+      of women seen for ultrasound assessment with a positive pregnancy test have a PUL.
+      For PUL, measurements of serum human chorionic gonadotrophin (hCG) and progesterone
+      are used to predict pregnancy viability and therefore give an indication of the risk
+      of an EP. Only 6-20% of PUL are subsequently diagnosed with EP. Non-tubal EPs are
+      relatively uncommon, difficult to diagnose and result in disproportionate morbidity
+      and mortality. CONCLUSIONS: Access to expertise and equipment for high-quality TVS
+      means the majority of women with EP in developed countries can be diagnosed rapidly
+      and accurately. Identifying PUL, which are low risk and therefore requiring less
+      follow-up, finding better serum markers for EP and safely identifying women who do
+      not require intervention for EP are the current diagnostic challenges.
+
+
+#Sprint2 code (RIS)
+
+
+abs.match(/(.*)\s+-\s+(.*\n+)*/g)[0].split(/(.*)\s+-\s+/)
+ris.split(/(.*\n)\n/)[14].match(/([^]*)\s+-\s+(.*\n+)*/g)[0].split(/(.*\s+)-\s+/)
+
+#Sprint2 code (RIS)
+
+
+
+
+
+
+
+
+
 var ris = `PMID- 22510618
 OWN - NLM
 STAT- MEDLINE
