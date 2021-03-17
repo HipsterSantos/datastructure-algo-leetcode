@@ -55,6 +55,14 @@ AB  - BACKGROUND: A diagnosis of ectopic pregnancy (EP) is primarily achieved us
 abs.match(/(.*)\s+-\s+(.*\n+)*/g)[0].split(/(.*)\s+-\s+/)
 ris.split(/(.*\n)\n/)[14].match(/([^]*)\s+-\s+(.*\n+)*/g)[0].split(/(.*\s+)-\s+/)
 
+ris.split(/([^]*?\n)\n/) //code to split the whole content starting from PMID and ending on SO ,
+/*
+The split happens when the regexp find the "" interval between the starting(PMID) and ending(SO) of each line (I'm gonna conside each line)
+ris2.split(/([^]*?\n)\n/).filter(items =>items != '')
+*/
+ris2.split(/([^]*?\n)\n/).filter(items =>items != '') //this code will remove the whole "" empty spaces between each line
+//now time to splite each line by (props and value)
+
 #Sprint2 code (RIS)
 
 
