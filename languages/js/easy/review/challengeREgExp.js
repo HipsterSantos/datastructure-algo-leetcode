@@ -1,4 +1,4 @@
-To conclude the chapter, we’ll look at a problem that calls for regular expres-
+giTo conclude the chapter, we’ll look at a problem that calls for regular expres-
 sions. Imagine we are writing a program to automatically collect information
 about our enemies from the Internet. (We will not actually write that program
 here, just the part that reads the configuration file. Sorry.) The configuration
@@ -26,6 +26,67 @@ function parseINI(string){
 
 
 //challenging create a Ris parser
+
+AB  - BACKGROUND: A diagnosis of ectopic pregnancy (EP) is primarily achieved using
+      transvaginal ultrasonography (TVS). Pregnancy of unknown location (PUL) is the term
+      used to categorize a pregnancy in a woman with a positive pregnancy test when no
+      pregnancy has been visualized using TVS. This review appraises current tools for the
+      diagnosis of EP, describes the diagnostic criteria for non-tubal EP and reviews the
+      literature on the clinical management of PUL. METHODS: We performed a targeted
+      search using the PubMed database. All articles published in the English language
+      from January 1984 to March 2013 were screened for eligibility. RESULTS: Using TVS to
+      diagnose EP is highly sensitive (87-99%) and specific (94-99.9%). Variations exist
+      in the criteria used for ultrasound diagnosis. Studies report that between 5 and 42%
+      of women seen for ultrasound assessment with a positive pregnancy test have a PUL.
+      For PUL, measurements of serum human chorionic gonadotrophin (hCG) and progesterone
+      are used to predict pregnancy viability and therefore give an indication of the risk
+      of an EP. Only 6-20% of PUL are subsequently diagnosed with EP. Non-tubal EPs are
+      relatively uncommon, difficult to diagnose and result in disproportionate morbidity
+      and mortality. CONCLUSIONS: Access to expertise and equipment for high-quality TVS
+      means the majority of women with EP in developed countries can be diagnosed rapidly
+      and accurately. Identifying PUL, which are low risk and therefore requiring less
+      follow-up, finding better serum markers for EP and safely identifying women who do
+      not require intervention for EP are the current diagnostic challenges.
+
+
+#Sprint2 code (RIS)
+
+
+abs.match(/(.*)\s+-\s+(.*\n+)*/g)[0].split(/(.*)\s+-\s+/)
+ris.split(/(.*\n)\n/)[14].match(/([^]*)\s+-\s+(.*\n+)*/g)[0].split(/(.*\s+)-\s+/)
+
+ris.split(/([^]*?\n)\n/) //code to split the whole content starting from PMID and ending on SO ,
+/*
+The split happens when the regexp find the "" interval between the starting(PMID) and ending(SO) of each line (I'm gonna conside each line)
+ris2.split(/([^]*?\n)\n/).filter(items =>items != '')
+*/
+ris2.split(/([^]*?\n)\n/).filter(items =>items != '') //this code will remove the whole "" empty spaces between each line
+//now time to splite each line by (props and value)
+
+
+ris2.split(/([^]*?\n)\n/).filter(items =>items != '').forEach((line)=>{
+
+    line.match(/([\w-\s]*?)-(\s*.*\n+)*/g)[0].split(/(.*\s+)-\s+/).forEach(line=>console.log(line));
+
+})
+
+
+#Sprint2 code (RIS) end
+
+
+#Sprint2 code (TXT)
+#Sprint2 code (TXT) end
+
+#Sprint2 code (MAC)
+#Sprint2 code (MAC)
+
+#Sprint2 code (WIN)
+#Sprint2 code (WIN) end
+
+
+
+
+
 
 var ris = `PMID- 22510618
 OWN - NLM
@@ -104,6 +165,23 @@ function addJson(){
     json = {prop,value}
     console.log(prop,value,main);
 }
+
+
+#later tryout
+
+let arr = [];
+    string.split(/\r?\n/).forEach((line) => {
+        if (!line.match(/^(\w+\s+?)-\s+?(.*)/)) {
+            arr[arr.length - 1] = `${arr[arr.length - 1]} ${line}`;
+        } else {
+            arr.push(line);
+        }
+    });
+#later tryout
+
+
+
+
 
 fetch data from github api
 
