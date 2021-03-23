@@ -1,4 +1,4 @@
-To conclude the chapter, we’ll look at a problem that calls for regular expres-
+giTo conclude the chapter, we’ll look at a problem that calls for regular expres-
 sions. Imagine we are writing a program to automatically collect information
 about our enemies from the Internet. (We will not actually write that program
 here, just the part that reads the configuration file. Sorry.) The configuration
@@ -62,6 +62,14 @@ ris2.split(/([^]*?\n)\n/).filter(items =>items != '')
 */
 ris2.split(/([^]*?\n)\n/).filter(items =>items != '') //this code will remove the whole "" empty spaces between each line
 //now time to splite each line by (props and value)
+
+
+ris2.split(/([^]*?\n)\n/).filter(items =>items != '').forEach((line)=>{
+
+    line.match(/([\w-\s]*?)-(\s*.*\n+)*/g)[0].split(/(.*\s+)-\s+/).forEach(line=>console.log(line));
+
+})
+
 
 #Sprint2 code (RIS)
 
@@ -150,6 +158,23 @@ function addJson(){
     json = {prop,value}
     console.log(prop,value,main);
 }
+
+
+#later tryout
+
+let arr = [];
+    string.split(/\r?\n/).forEach((line) => {
+        if (!line.match(/^(\w+\s+?)-\s+?(.*)/)) {
+            arr[arr.length - 1] = `${arr[arr.length - 1]} ${line}`;
+        } else {
+            arr.push(line);
+        }
+    });
+#later tryout
+
+
+
+
 
 fetch data from github api
 
