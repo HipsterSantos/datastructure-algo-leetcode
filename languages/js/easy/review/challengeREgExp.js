@@ -71,10 +71,17 @@ ris2.split(/([^]*?\n)\n/).filter(items =>items != '').forEach((line)=>{
 })
 
 
-#Sprint2 code (RIS)
+#Sprint2 code (RIS) end
 
 
+#Sprint2 code (TXT)
+#Sprint2 code (TXT) end
 
+#Sprint2 code (MAC)
+#Sprint2 code (MAC)
+
+#Sprint2 code (WIN)
+#Sprint2 code (WIN) end
 
 
 
